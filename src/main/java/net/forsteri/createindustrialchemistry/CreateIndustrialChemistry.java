@@ -1,6 +1,9 @@
 package net.forsteri.createindustrialchemistry;
 
 import com.mojang.logging.LogUtils;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.tterrag.registrate.providers.ProviderType;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.forsteri.createindustrialchemistry.entry.substancesRegister.DeferredRegisters;
 import net.forsteri.createindustrialchemistry.entry.substancesRegister.SolidSubstances;
 import net.minecraft.world.level.block.Block;
@@ -23,6 +26,8 @@ public class CreateIndustrialChemistry {
 
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final NonNullSupplier<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy(CreateIndustrialChemistry.MOD_ID);
 
     public CreateIndustrialChemistry() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -55,5 +60,9 @@ public class CreateIndustrialChemistry {
             // Register a new block here
             LOGGER.info("HELLO from Register Block");
         }
+    }
+
+    public static CreateRegistrate registrate() {
+        return REGISTRATE.get();
     }
 }

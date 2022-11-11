@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createindustrialchemistry:carbon_monoxide",
+      "amount": 500
+    },
+    {
+      "fluid": "createindustrialchemistry:distilled_water",
+      "amount": 500
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createindustrialchemistry:carbon_dioxide",
+      "amount": 500
+    },
+    {
+      "fluid": "createindustrialchemistry:hydrogen",
+      "amount": 500
+    }
+  ],
+  "heatRequirement": "superheated"
+}

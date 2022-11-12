@@ -1,0 +1,18 @@
+{
+  "type": "createindustrialchemistry:electrolysis",
+  "ingredients": [
+    {
+      "item": "createindustrialchemistry:calcium_carbonate"
+    }
+  ],
+  "results": [
+    {
+      "item": "createindustrialchemistry:calcium_oxide"
+    },
+    {
+      "fluid": "createindustrialchemistry:carbon_dioxide",
+      "amount": 1000
+    }
+  ],
+  "heatRequirement": "superheated"
+}

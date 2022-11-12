@@ -13,6 +13,7 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import net.forsteri.createindustrialchemistry.CreateIndustrialChemistry;
 import net.forsteri.createindustrialchemistry.entry.creativeModeTabs.EquipmentTab;
 import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.KineticElectrolyzerBlock;
+import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.KineticElectrolyzerInstance;
 import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.KineticElectrolyzerRenderer;
 import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.KineticElectrolyzerTileEntity;
 import net.minecraft.client.renderer.RenderType;
@@ -33,7 +34,7 @@ public class TileEntities {
 
     public static final BlockEntityEntry<KineticElectrolyzerTileEntity> KINETIC_ELECTROLYZER_TILE_ENTITY = REGISTRATE
             .tileEntity("kinetic_electrolyzer", KineticElectrolyzerTileEntity::new)
-            .instance(() -> ShaftInstance::new, false)
+            .instance(() -> KineticElectrolyzerInstance::new, false)
             .validBlocks(Blocks.KINETIC_ELECTROLYZER_BLOCK)
             .renderer(() -> KineticElectrolyzerRenderer::new)
             .register();

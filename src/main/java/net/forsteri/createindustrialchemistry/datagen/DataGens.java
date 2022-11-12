@@ -13,7 +13,10 @@ public class DataGens {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
         DataGenerator generator = event.getGenerator();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+        if (event.includeClient()) {
+            generator.addProvider(new LangMerger(generator));
+        }
 
         generator.addProvider(new EmptyingModRecipesProvider(generator));
         generator.addProvider(new AutoWaterJsonProvider(generator, CreateIndustrialChemistry.MOD_ID, event.getExistingFileHelper()));

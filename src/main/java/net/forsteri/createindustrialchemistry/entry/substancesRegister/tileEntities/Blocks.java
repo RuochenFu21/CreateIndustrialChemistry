@@ -21,6 +21,7 @@ public class Blocks {
 
     public static final BlockEntry<KineticElectrolyzerBlock> KINETIC_ELECTROLYZER_BLOCK = REGISTRATE.block("kinetic_electrolyzer", KineticElectrolyzerBlock::new)
             .initialProperties(SharedProperties::softMetal)
+            .blockstate(BlockStateGen.horizontalBlockProvider(true))
             .transform(pickaxeOnly())
             .properties(BlockBehaviour.Properties::noOcclusion)
             .item()

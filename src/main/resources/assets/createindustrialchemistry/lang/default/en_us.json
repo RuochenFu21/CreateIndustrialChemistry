@@ -77,6 +77,10 @@
   "item.createindustrialchemistry.carbon_monoxide_tank" : "Carbon Monoxide Tank",
   "iupac.createindustrialchemistry.carbon_monoxide_tank" : "Carbon monoxide",
   "formula.createindustrialchemistry.carbon_monoxide_tank" : "CO",
+  "fluid.createindustrialchemistry.oxygen": "Oxygen",
+  "item.createindustrialchemistry.oxygen_tank" : "Oxygen Tank",
+  "iupac.createindustrialchemistry.oxygen_tank" : "Dioxygen",
+  "formula.createindustrialchemistry.oxygen_tank" : "O2",
 
   "block.createindustrialchemistry.acidic_sand": "Acidic Sand",
   "block.createindustrialchemistry.purified_sand": "Purified Sand",
@@ -88,6 +92,8 @@
   "item.createindustrialchemistry.dirty_metal_tank": "Dirty Tank",
   "iupac.createindustrialchemistry.dirty_metal_tank": "Don't have one",
   "formula.createindustrialchemistry.dirty_metal_tank": "Don't have one",
+  "create.recipe.electrolysis": "Electrolysis",
+  "block.createindustrialchemistry.kinetic_electrolyzer": "Kinetic Electrolyzer",
 
   "itemGroup.alkali_substance_tab" : "Alkali Substance",
   "itemGroup.aqueous_solution_tab" : "Aqueous Solutions",

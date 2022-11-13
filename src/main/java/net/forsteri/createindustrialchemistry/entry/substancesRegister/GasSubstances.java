@@ -7,6 +7,7 @@ import net.forsteri.createindustrialchemistry.substances.abstracts.fluidBlockTyp
 import net.forsteri.createindustrialchemistry.substances.compound.CarbonDioxide;
 import net.forsteri.createindustrialchemistry.substances.compound.CarbonMonoxide;
 import net.forsteri.createindustrialchemistry.substances.compound.Steam;
+import net.forsteri.createindustrialchemistry.substances.element.Oxygen;
 import net.forsteri.createindustrialchemistry.substances.equipment.MetalTank;
 import net.forsteri.createindustrialchemistry.substances.element.Hydrogen;
 import net.forsteri.createindustrialchemistry.substances.abstracts.FluidBlock;
@@ -158,6 +159,40 @@ public class GasSubstances {
                     new Item.Properties()
                             .stacksTo(1),
                     CompoundSubstanceTab.COMPOUND_SUBSTANCE_TAB, FluidTab.FLUID_TAB
+            ));
+
+    public static final RegistryObject<FlowingFluid> OXYGEN_SOURCE
+            = FLUIDS.register("oxygen", () -> new Oxygen.Source(GasSubstances.OXYGEN_PROPERTIES));
+
+    public static final RegistryObject<FlowingFluid> OXYGEN_FLOWING
+            = FLUIDS.register("oxygen_flowing", () -> new Oxygen.Flowing(GasSubstances.OXYGEN_PROPERTIES));
+
+    public static final ForgeFlowingFluid.Properties OXYGEN_PROPERTIES = new ForgeFlowingFluid.Properties(
+            () -> GasSubstances.OXYGEN_SOURCE.get(), () -> GasSubstances.OXYGEN_FLOWING.get(),
+            FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
+                    .density(10)
+                    .luminosity(0)
+                    .viscosity(0)
+                    .sound(SoundEvents.BUCKET_FILL)
+                    .color(0xFFFFFFFF)
+                    .gaseous()
+    )
+            .slopeFindDistance(5)
+            .levelDecreasePerBlock(2)
+            .block(() -> GasSubstances.OXYGEN_BLOCK.get())
+            .bucket(() -> Items.BUCKET)
+            ;
+
+    public static final RegistryObject<FluidBlock> OXYGEN_BLOCK = BLOCKS.register("oxygen",
+            () -> new FluidBlock(() -> GasSubstances.OXYGEN_SOURCE.get(), BlockBehaviour.Properties.of(Material.WATER)
+                    .noCollission().strength(100f).noDrops()));
+
+    public static final RegistryObject<Item> OXYGEN_TANK = ITEMS.register("oxygen_tank",
+            () -> new MetalTank(
+                    GasSubstances.OXYGEN_SOURCE,
+                    new Item.Properties()
+                            .stacksTo(1),
+                    ElementarySubstanceTab.ELEMENTARY_SUBSTANCE_TAB, FluidTab.FLUID_TAB
             ));
 
     public static void register(){}

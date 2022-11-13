@@ -1,0 +1,19 @@
+{
+  "type": "createindustrialchemistry:electrolysis",
+  "ingredients": [
+    {
+      "fluid": "createindustrialchemistry:distilled_water",
+      "amount": 750
+    }
+  ],
+  "results": [
+    {
+      "fluid": "createindustrialchemistry:hydrogen",
+      "amount": 500
+    },
+    {
+      "fluid": "createindustrialchemistry:oxygen",
+      "amount": 250
+    }
+  ]
+}

@@ -73,6 +73,10 @@
   "item.createindustrialchemistry.distilled_water_tank" : "蒸馏水罐",
   "iupac.createindustrialchemistry.distilled_water_tank" : "蒸馏水",
   "formula.createindustrialchemistry.distilled_water_tank" : "H2O",
+  "fluid.createindustrialchemistry.oxygen": "氧气",
+  "item.createindustrialchemistry.oxygen_tank" : "氧气罐",
+  "iupac.createindustrialchemistry.oxygen_tank" : "氧气",
+  "formula.createindustrialchemistry.oxygen_tank" : "O2",
 
   "block.createindustrialchemistry.acidic_sand": "含酸的沙子",
   "block.createindustrialchemistry.purified_sand": "纯沙",
@@ -84,6 +88,8 @@
   "item.createindustrialchemistry.dirty_metal_tank": "空罐",
   "iupac.createindustrialchemistry.dirty_metal_tank": "无",
   "formula.createindustrialchemistry.dirty_metal_tank": "无",
+  "create.recipe.electrolysis": "电解",
+  "block.createindustrialchemistry.kinetic_electrolyzer": "应力式电解器",
 
   "itemGroup.alkali_substance_tab": "机械动力: 工业化学 | 碱性物质",
   "itemGroup.aqueous_solution_tab" : "机械动力: 工业化学 | 水溶液",

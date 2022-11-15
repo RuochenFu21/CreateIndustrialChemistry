@@ -1,32 +1,12 @@
-package net.forsteri.createindustrialchemistry.compact;
+package net.forsteri.createindustrialchemistry.compat;
 
 import com.simibubi.create.AllBlocks;
-import com.simibubi.create.AllItems;
-import com.simibubi.create.AllRecipeTypes;
-import com.simibubi.create.Create;
 import com.simibubi.create.compat.jei.*;
 import com.simibubi.create.compat.jei.category.*;
-import com.simibubi.create.content.contraptions.components.crafter.MechanicalCraftingRecipe;
-import com.simibubi.create.content.contraptions.components.crusher.AbstractCrushingRecipe;
-import com.simibubi.create.content.contraptions.components.deployer.DeployerApplicationRecipe;
-import com.simibubi.create.content.contraptions.components.deployer.ManualApplicationRecipe;
-import com.simibubi.create.content.contraptions.components.fan.HauntingRecipe;
-import com.simibubi.create.content.contraptions.components.fan.SplashingRecipe;
-import com.simibubi.create.content.contraptions.components.press.MechanicalPressTileEntity;
-import com.simibubi.create.content.contraptions.components.press.PressingRecipe;
-import com.simibubi.create.content.contraptions.components.saw.CuttingRecipe;
-import com.simibubi.create.content.contraptions.components.saw.SawTileEntity;
-import com.simibubi.create.content.contraptions.fluids.actors.FillingRecipe;
-import com.simibubi.create.content.contraptions.fluids.recipe.PotionMixingRecipes;
-import com.simibubi.create.content.contraptions.itemAssembly.SequencedAssemblyRecipe;
 import com.simibubi.create.content.contraptions.processing.BasinRecipe;
-import com.simibubi.create.content.contraptions.processing.EmptyingRecipe;
-import com.simibubi.create.content.contraptions.processing.ItemApplicationRecipe;
-import com.simibubi.create.content.curiosities.tools.SandPaperPolishingRecipe;
 import com.simibubi.create.foundation.config.AllConfigs;
 import com.simibubi.create.foundation.config.CRecipes;
 import com.simibubi.create.foundation.config.ConfigBase;
-import com.simibubi.create.foundation.data.recipe.LogStrippingFakeRecipes;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.foundation.utility.recipe.IRecipeTypeInfo;
 import mezz.jei.api.IModPlugin;
@@ -41,25 +21,17 @@ import net.forsteri.createindustrialchemistry.CreateIndustrialChemistry;
 import net.forsteri.createindustrialchemistry.entry.substancesRegister.tileEntities.Blocks;
 import net.forsteri.createindustrialchemistry.entry.substancesRegister.tileEntities.RecipeTypes;
 import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.recipe.ElectrolysisCategory;
-import net.forsteri.createindustrialchemistry.substances.equipment.kineticElectrolyzer.recipe.ElectrolyzerRecipe;
-import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.crafting.IShapedRecipe;
-import net.minecraftforge.fml.ModList;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-
-import static com.simibubi.create.compat.jei.CreateJEI.consumeAllRecipes;
 
 @JeiPlugin
 public class CreateIndustrialChemistryJEI implements IModPlugin {
